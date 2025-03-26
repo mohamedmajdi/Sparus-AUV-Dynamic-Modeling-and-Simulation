@@ -55,7 +55,7 @@ To simulate different scenarios, we vary the percentage of each thruster's maxim
 To validate the simulator, we first test the buoyancy behavior by setting the thrusters activation to `[0 0 0]` and the initial positions to `[0 0 5 0 pi/2 0]`. In this scenario, the thrusters are deactivated, the initial z-position is +5, and the initial pitch orientation is 90 degrees. The following plot illustrates the buoyancy effect after running the simulation for 120 seconds:
 
 <div align="center">
-    <img src="plots/buoyancy.png" width="100%">
+    <img src="plots/buoyancy.png" width="70%">
     <p>Buoyancy Behavior</p>
 </div>
 
@@ -65,7 +65,7 @@ As seen in the figure, the Sparus starts to move upward from its initial z-posit
 We test the heave motion along the z-axis by activating the thrusters `[100 0 0]` and setting initial positions and velocities to zero. The following plot illustrates the behavior after running the simulation for 50 seconds:
 
 <div align="center">
-    <img src="plots/heave.png" width="100%">
+    <img src="plots/heave.png" width="70%">
     <p>Heave Motion</p>
 </div>
 
@@ -74,10 +74,9 @@ As predicted, the Sparus moves downward in the positive z-direction, going deepe
 ### Mass Matrix Impact
 The global mass matrix is given by:
 
-\[ M_{\text{global}}^{CG}  = M_{\text{added}}^{CG} + M_{\text{real}}^{CG} \]
+$$M_{\text{global}}^{CG}  = M_{\text{added}}^{CG} + M_{\text{real}}^{CG}$$
 
-\[
-M_{\text{global}}^{CG}  = 
+$$M_{\text{global}}^{CG}  = 
 \begin{bmatrix}
 54.9889 & 0 & 0 & 0 & 0.0821 & 0 \\
 0 & 111.0911 & 0 & -1.4338 & 0 & 2.6430 \\
@@ -85,13 +84,12 @@ M_{\text{global}}^{CG}  =
 0 & -1.4338 & 0 & 1.6226 & 0 & -0.2161 \\
 0.0821 & 0 & -22.5864 & 0 & 31.0733 & 0 \\
 0 & 2.6430 & 0 & -0.2161 & 0 & 19.2672
-\end{bmatrix}
-\]
+\end{bmatrix}$$
 
 To analyze its effect, we impose linear acceleration along the x-axis by setting the thrusters to `[0 15 15]` and initial positions and velocities to zero. The following plots illustrate the results after running the simulation for 20 seconds:
 
 <div align="center">
-    <img src="plots/x_acceleration.png" width="100%">
+    <img src="plots/x_acceleration.png" width="70%">
     <p>Imposing Linear Acceleration Along X-Axis</p>
 </div>
 
@@ -99,18 +97,18 @@ To analyze its effect, we impose linear acceleration along the x-axis by setting
 To observe damping behavior, we impose a constant linear speed along the x-axis with initial speed set to 10. We compare simulations with and without antenna drag:
 
 <div align="center">
-    <img src="plots/x_vel_withdragandantenna.png" width="100%">
+    <img src="plots/x_vel_withdragandantenna.png" width="70%">
     <p>Simulation with All Drag Forces</p>
 </div>
 
 <div align="center">
-    <img src="plots/x_vel_withdrag.png" width="100%">
+    <img src="plots/x_vel_withdrag.png" width="70%">
     <p>Simulation Without Antenna Drag</p>
 </div>
 
 Lastly, we test motion without drag forces:
 
 <div align="center">
-    <img src="plots/x_vel_nodrag.png" width="100%">
+    <img src="plots/x_vel_nodrag.png" width="70%">
     <p>Simulation Without Drag Forces</p>
 </div>
