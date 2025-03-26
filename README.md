@@ -12,6 +12,8 @@ The Sparus AUV is represented in the figure below. We consider the origin of the
 
 
 ## Project Workflow
+For detailed calculations and further analysis, please refer to the [project report](Report_sparus.pdf).
+
 1. **Compute Dimensions**  
    - Using the AUV picture and the known full-body length, computing all other dimensions of the different bodies.
 
@@ -92,6 +94,24 @@ To analyze its effect, we impose linear acceleration along the x-axis by setting
     <img src="plots/x_acceleration.png" width="70%">
     <p>Imposing Linear Acceleration Along X-Axis</p>
 </div>
+
+To analyze vertical acceleration, we impose a linear acceleration along the z-axis by activating the thrusters `[100 0 0]` and setting initial positions and velocities to zero. The following plot illustrates the results after running the simulation for 20 seconds:
+
+<div align="center">
+    <img src="plots/z_acceleration.png" width="60%">
+    <p>Imposing Linear Acceleration Along Z-Axis</p>
+</div>
+
+As expected, the Sparus moves in the positive z-direction due to the upward thrust force applied.
+
+To observe the impact of activating a single thruster, we activate only the right backward thruster `[0 0 -100]`, while keeping the others deactivated. This experiment helps analyze the vehicle's rotational behavior due to an asymmetric thrust input. The following plot shows the simulation results:
+
+<div align="center">
+    <img src="plots/right_backward_thruster.png" width="60%">
+    <p>Activation of Right Backward Thruster Only</p>
+</div>
+
+This configuration results in a counterclockwise yaw rotation due to the unbalanced force distribution.
 
 ### Drag Force Impact
 To observe damping behavior, we impose a constant linear speed along the x-axis with initial speed set to 10. We compare simulations with and without antenna drag:
