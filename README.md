@@ -6,7 +6,7 @@ Sparus autonomous underwater vehicle, developed by IQUA Robotics in Girona, Spai
 The Sparus AUV is represented in the figure below. We consider the origin of the base "body" in the gravity center of the Sparus. It is placed at the x-position of the central thruster and at the middle of the cylinder.
 
 <div align="center">
-<img src = "sparus_auv_image.png" width="100%">
+<img src = "sparus_auv_image.png" width="60%">
 <p>Sparus AUV</p>
 </div>
 
@@ -67,7 +67,7 @@ As seen in the figure, the Sparus starts to move upward from its initial z-posit
 We test the heave motion along the z-axis by activating the thrusters `[100 0 0]` and setting initial positions and velocities to zero. The following plot illustrates the behavior after running the simulation for 50 seconds:
 
 <div align="center">
-    <img src="plots/heave.png" width="70%">
+    <img src="plots/heave.png" width="50%">
     <p>Heave Motion</p>
 </div>
 
@@ -107,7 +107,7 @@ As expected, the Sparus moves in the positive z-direction due to the upward thru
 To observe the impact of activating a single thruster, we activate only the right backward thruster `[0 0 -100]`, while keeping the others deactivated. This experiment helps analyze the vehicle's rotational behavior due to an asymmetric thrust input. The following plot shows the simulation results:
 
 <div align="center">
-    <img src="plots/right_backward_thruster.png" width="60%">
+    <img src="plots/right_thruster.png" width="60%">
     <p>Activation of Right Backward Thruster Only</p>
 </div>
 
@@ -129,6 +129,6 @@ To observe damping behavior, we impose a constant linear speed along the x-axis 
 Lastly, we test motion without drag forces:
 
 <div align="center">
-    <img src="plots/x_vel_nodrag.png" width="70%">
+    <img src="plots/x_vel_nodrag.png" width="80%">
     <p>Simulation Without Drag Forces</p>
 </div>
